@@ -1,0 +1,30 @@
+{
+    "name": "madbyad/mpl-long-poll",
+    "description": "A PHP Library to provide an easy way to implement real time communication with HTTP Long Polling",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "Real Time Communication",
+        "HTTP Long Polling",
+        "Long Polling",
+        "HTTP"
+    ],
+    "autoload": {
+        "psr-4": {
+            "MadByAd\\MPLLongPoll\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "MadByAd",
+            "email": "adityaaw84@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "PHP": ">= 7.0.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.6"
+    }
+}
