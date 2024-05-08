@@ -3,3 +3,5 @@
 /.editorconfig
 /*.cache
 /composer.lock
+/src/Messages/*
+!/src/Messages/MessageReader.php
