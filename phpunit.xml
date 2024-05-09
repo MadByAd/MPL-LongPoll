@@ -1,0 +1,8 @@
+<phpunit bootstrap="vendor/autoload.php" colors="true" processIsolation="false" testdox="true" convertWarningsToExceptions="false">
+    <testsuites>
+        <testsuite name="longpoll">
+            <file>tests/TestMessage.php</file>
+            <file>tests/TestRead.php</file>
+        </testsuite>
+    </testsuites>
+</phpunit>
