@@ -12,8 +12,8 @@
 
 namespace MadByAd\MPLLongPoll;
 
+use MadByAd\MPLLongPoll\Exceptions\InvalidQueryTimeException;
 use MadByAd\MPLLongPoll\Messages\MessageReader;
-use UnderflowException;
 
 /**
  *
@@ -65,6 +65,9 @@ class LongPoll
 
     public static function setQueryTime(int $second)
     {
+        if($second <= 0) {
+            throw new InvalidQueryTimeException("Error: query time cannot be / lower than 0");
+        }
         self::$queryTime = $second;
     }
 
@@ -75,7 +78,7 @@ class LongPoll
      *                   `JSON_HEX_TAG`, `JSON_HEX_AMP`, `JSON_HEX_APOS`,
      *                   `JSON_NUMERIC_CHECK`, `JSON_PRETTY_PRINT`,
      *                   `JSON_UNESCAPED_SLASHES`, `JSON_FORCE_OBJECT`,
-     *                   `JSON_UNESCAPED_UNICODE`. `JSON_THROW_ON_ERROR`
+     *                   `JSON_UNESCAPED_UNICODE`, `JSON_THROW_ON_ERROR`
      *
      * @return void
      */
